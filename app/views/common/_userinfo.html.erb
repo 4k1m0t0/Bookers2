@@ -2,7 +2,7 @@
   <div>
 <h3>User info</h3>
 <%= attachment_image_tag @user, :profile_image, size: "60x60", fallback: "no_image.jpg" %>
-<table>
+<table class="table">
 <tr>
 	<td>name</td>
 	<td><%= @user.name %></td>
@@ -13,11 +13,12 @@
 </tr>
 </table>
 
-<button class="btn btn-default">
+
 <%= link_to edit_user_path(@user.id) do %>
+<button class="btn btn-default btn-block">
   <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-<% end %>
 </button>
+<% end %>
 </div>
 <%= render 'books/new' %>
 </div>
